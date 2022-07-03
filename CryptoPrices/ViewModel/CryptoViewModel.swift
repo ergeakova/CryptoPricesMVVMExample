@@ -9,7 +9,9 @@ import Foundation
 
 struct CryptoViewModel {
     let cryptoCurrency : CryptoCurrency
-    
+}
+
+extension CryptoViewModel {
     var name : String {
         return self.cryptoCurrency.currency
     }
