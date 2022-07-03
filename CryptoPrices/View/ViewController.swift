@@ -10,17 +10,25 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    private var cryptoListViewModel : CryptoListViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
+        getData()
+    }
+    
+    func getData(){
         let url = "https://raw.githubusercontent.com/atilsamancioglu/K21-JSONDataSet/master/crypto.json"
         
         CryptoSevice().downloadCurrencies(addr: url) { Cryptos in
-            if let Cryptos = Cryptos {
-                print(Cryptos)
+            if let cryptos = Cryptos {
+                self.cryptoListViewModel = CryptoListViewModel(cryptoCurrencyList: cryptos)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         }
     }
@@ -29,14 +37,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
        
         let cell = tableView.dequeueReusableCell(withIdentifier: "CryptoCell", for: indexPath) as! CryptoTableViewCell
         
-        cell.txtCurrency.text = "Cur:"
-        cell.txtPrice.text = "pri"
+        let cryptoViewModel = self.cryptoListViewModel.cryptoAtIndex(index: indexPath.row)
+        cell.txtCurrency.text = cryptoViewModel.name
+        cell.txtPrice.text = cryptoViewModel.price
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.cryptoListViewModel == nil ? 0 : self.cryptoListViewModel.numberOfRowsInSection()
     }
   
 }

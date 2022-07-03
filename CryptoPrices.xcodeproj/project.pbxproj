@@ -17,6 +17,7 @@
 		C039DE5B28723A6200B92D9E /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C039DE5A28723A6200B92D9E /* CryptoCurrency.swift */; };
 		C039DE5D28723C6A00B92D9E /* CryptoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C039DE5C28723C6A00B92D9E /* CryptoService.swift */; };
 		C039DE6128724C8B00B92D9E /* CryptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C039DE6028724C8B00B92D9E /* CryptoViewModel.swift */; };
+		C039DE632872549700B92D9E /* CryptoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C039DE622872549700B92D9E /* CryptoListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C039DE5A28723A6200B92D9E /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
 		C039DE5C28723C6A00B92D9E /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
 		C039DE6028724C8B00B92D9E /* CryptoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewModel.swift; sourceTree = "<group>"; };
+		C039DE622872549700B92D9E /* CryptoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				C039DE6028724C8B00B92D9E /* CryptoViewModel.swift */,
+				C039DE622872549700B92D9E /* CryptoListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				C039DE4128722F5300B92D9E /* AppDelegate.swift in Sources */,
 				C039DE6128724C8B00B92D9E /* CryptoViewModel.swift in Sources */,
 				C039DE5B28723A6200B92D9E /* CryptoCurrency.swift in Sources */,
+				C039DE632872549700B92D9E /* CryptoListViewModel.swift in Sources */,
 				C039DE5D28723C6A00B92D9E /* CryptoService.swift in Sources */,
 				C039DE4328722F5300B92D9E /* SceneDelegate.swift in Sources */,
 			);
