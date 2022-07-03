@@ -40,6 +40,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cryptoViewModel = self.cryptoListViewModel.cryptoAtIndex(index: indexPath.row)
         cell.txtCurrency.text = cryptoViewModel.name
         cell.txtPrice.text = cryptoViewModel.price
+        cell.backgroundColor = UIColor(
+            red: CGFloat.random(in: 0...1),
+            green: CGFloat.random(in: 0...1),
+            blue: CGFloat.random(in: 0...1),
+            alpha: 1.0)
         return cell
         
     }
@@ -49,4 +54,3 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
   
 }
-
